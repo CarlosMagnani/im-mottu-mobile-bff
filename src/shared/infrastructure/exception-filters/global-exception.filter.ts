@@ -26,8 +26,6 @@ export class GlobalExceptionFilter implements ExceptionFilter {
       message = exception.message;
       errorType = exception.name;
     }
-
-    // Log the error with Pino
     this.logger.error({
       type: errorType,
       statusCode,
